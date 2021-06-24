@@ -1,9 +1,9 @@
 import './style.css';
 
-type AppProps = {
-  content: string;
+type props = {
+  children: React.ReactNode;
 };
 
-const Button = ({ content }: AppProps) => <button>{content}</button>;
+const Button = ({ children }: props) => <button>{children}</button>;
 
 export default Button;

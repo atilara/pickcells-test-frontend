@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './style.css';
 
 import Button from '../../components/Button';
@@ -15,13 +16,13 @@ const Home = () => {
       </h4>
       <div id="button-wrapper">
         <a href="https://github.com/pickcells/pickcells_test" target="_blank">
-          <Button content="Desafio" />
+          <Button>Desafio</Button>
         </a>
         <a
           href="https://github.com/atilara/pickcells-test-frontend"
           target="_blank"
         >
-          <Button content="Repositório" />
+          <Button>Repositório</Button>
         </a>
       </div>
     </div>
