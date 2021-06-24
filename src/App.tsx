@@ -1,8 +1,8 @@
 import './assets/style/globalStyle.css';
 import Routes from './routes';
 
-function App() {
+const App = () => {
   return <Routes />;
-}
+};
 
 export default App;
