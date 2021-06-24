@@ -1,0 +1,14 @@
+button {
+  padding: .5rem 1rem;
+  margin: .5rem;
+  border: solid 1px var(--gray-six);
+  border-radius: var(--rounded-border-three);
+  background-color: var(--gray-one);
+  transition: .2s;
+}
+
+button:hover {
+  background-color: var(--main-blue);
+  color: var(--white);
+  transition: .2s;
+}
