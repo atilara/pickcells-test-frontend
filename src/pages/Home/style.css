@@ -6,8 +6,53 @@
   margin: 2rem 1rem;
 }
 
-#container img {
+#container > img {
   width: 10rem;
 }
 
-#button-wrapper {}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1, header p {
+  text-align: center;
+}
+
+header img {
+  width: 20rem;
+}
+
+#button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 800px) {
+  header {
+    flex-direction: row;
+  }
+
+  header div {
+    max-width: 40rem;
+    margin-right: 1rem;
+  }
+
+  header img {
+    width: 30rem;
+  }
+  
+  #pages {
+    flex-direction: row;
+  }
+}
