@@ -5,6 +5,7 @@ button {
   border-radius: var(--rounded-border-three);
   background-color: var(--gray-one);
   transition: .2s;
+  cursor: pointer;
 }
 
 button:hover {
