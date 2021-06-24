@@ -1,0 +1,18 @@
+#card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: var(--rounded-border-two);
+  width: 14rem;
+  height: 18rem;
+  margin: 1rem;
+  padding: .5rem;
+  background-color: var(--main-blue);
+}
+
+#card h3, #card p {
+  text-align: center;
+  color: var(--white);
+}
