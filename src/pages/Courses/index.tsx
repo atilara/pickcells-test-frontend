@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
-import Course from '../../components/Course';
+import Item from '../../components/Item';
 
 import './style.css';
 
@@ -27,9 +27,7 @@ const Courses = () => {
       <h1>Listagem de Cursos</h1>
       <div id="courses">
         {courses.map((course) => {
-          return (
-            <Course key={course.id} name={course.name} type={course.type} />
-          );
+          return <Item key={course.id} name={course.name} type={course.type} />;
         })}
       </div>
     </div>

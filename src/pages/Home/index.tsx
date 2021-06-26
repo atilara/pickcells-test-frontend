@@ -47,7 +47,7 @@ const Home = () => {
           title="Classes"
           description="Apresenta toda a listagem de classes disponíveis e que podem estar
             associadas a um curso"
-          link="/courses"
+          link="/classes"
         />
       </div>
     </div>
