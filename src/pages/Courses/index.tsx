@@ -16,7 +16,7 @@ const Courses = () => {
 
   async function loadCourses() {
     const courses = await api.get('courses');
-    setCourses(courses.data);
+    setCourses(courses.data.course_classes);
   }
   useEffect(() => {
     loadCourses();
