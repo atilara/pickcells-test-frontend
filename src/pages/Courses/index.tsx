@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 
+import Course from '../../components/Course';
+
 import './style.css';
 
 type Course = {
@@ -21,21 +23,15 @@ const Courses = () => {
   });
 
   return (
-    <div id="courses">
-      {courses.map((course) => {
-        return (
-          <div key={course.id}>
-            <h3>
-              {course.name}:{' '}
-              {course.type === 0
-                ? 'Graduação'
-                : course.type === 1
-                ? 'Mestrado'
-                : 'Doutorado'}
-            </h3>
-          </div>
-        );
-      })}
+    <div id="container">
+      <h1>Listagem de Cursos</h1>
+      <div id="courses">
+        {courses.map((course) => {
+          return (
+            <Course key={course.id} name={course.name} type={course.type} />
+          );
+        })}
+      </div>
     </div>
   );
 };
