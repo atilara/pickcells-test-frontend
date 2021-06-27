@@ -9,6 +9,7 @@ type Course = {
   id: number;
   name: string;
   type: number;
+  mandatory_workload: string;
 };
 
 const Courses = () => {
@@ -27,7 +28,14 @@ const Courses = () => {
       <h1>Listagem de Cursos</h1>
       <div id="courses">
         {courses.map((course) => {
-          return <Item key={course.id} name={course.name} type={course.type} />;
+          return (
+            <Item
+              key={course.id}
+              name={course.name}
+              type={course.type}
+              workload={course.mandatory_workload}
+            />
+          );
         })}
       </div>
     </div>

@@ -3,9 +3,10 @@ import './style.css';
 type props = {
   name: string;
   type?: number;
+  workload?: string;
 };
 
-const Item = ({ name, type = 3 }: props) => {
+const Item = ({ name, type = 3, workload }: props) => {
   return (
     <div id="item">
       <h3>{name}</h3>
@@ -18,6 +19,7 @@ const Item = ({ name, type = 3 }: props) => {
           ? 'Doutorado'
           : ''}
       </p>
+      <p>{workload ? `Carga Horária: ${workload}` : ``}</p>
     </div>
   );
 };
