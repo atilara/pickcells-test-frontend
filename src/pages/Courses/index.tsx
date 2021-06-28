@@ -39,15 +39,9 @@ const Courses = () => {
                   ? 'Graduação'
                   : type === 1
                   ? 'Mestrado'
-                  : type === 2
-                  ? 'Doutorado'
-                  : ''}
+                  : 'Doutorado'}
               </p>
-              <p>
-                {mandatory_workload
-                  ? `Carga Horária: ${mandatory_workload}`
-                  : ``}
-              </p>
+              <p>{`Carga Horária: ${mandatory_workload}`}</p>
               <Link to={`/courses/${id}`}>
                 <Button>Acessar aqui</Button>
               </Link>
