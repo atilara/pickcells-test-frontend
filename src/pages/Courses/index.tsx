@@ -7,8 +7,6 @@ import getCourseType from '../../utils/getCourseType';
 import Item from '../../components/Item';
 import Button from '../../components/Button';
 
-import './style.css';
-
 type Course = {
   id: number;
   name: string;
@@ -30,7 +28,7 @@ const Courses = () => {
   return (
     <div id="container">
       <h1>Listagem de Cursos</h1>
-      <div id="courses">
+      <div id="item-grid">
         {courses.map(({ id, name, type, mandatory_workload }) => {
           return (
             <Item key={id}>

@@ -3,8 +3,6 @@ import Item from '../../components/Item';
 
 import api from '../../services/api';
 
-import './style.css';
-
 type Class = {
   id: number;
   name: string;
@@ -25,7 +23,7 @@ const Classes = () => {
   return (
     <div id="container">
       <h1>Listagem de Classes</h1>
-      <div id="classes">
+      <div id="item-grid">
         {classes.map(({ id, name }) => {
           return (
             <Item key={id}>

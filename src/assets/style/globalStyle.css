@@ -26,3 +26,24 @@ body {
 * {
   font-family: 'Titillium Web', sans-serif;
 }
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 1rem;
+}
+
+#item-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 800px) {
+  #item-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
