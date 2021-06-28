@@ -48,6 +48,9 @@ const Courses = () => {
                   ? `Carga Horária: ${mandatory_workload}`
                   : ``}
               </p>
+              <Link to={`/courses/${id}`}>
+                <Button>Acessar aqui</Button>
+              </Link>
             </Item>
           );
         })}
