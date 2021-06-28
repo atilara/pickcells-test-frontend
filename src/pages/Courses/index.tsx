@@ -21,7 +21,7 @@ const Courses = () => {
   }
   useEffect(() => {
     loadCourses();
-  });
+  }, []);
 
   return (
     <div id="container">
