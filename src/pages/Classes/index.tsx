@@ -26,8 +26,12 @@ const Classes = () => {
     <div id="container">
       <h1>Listagem de Classes</h1>
       <div id="classes">
-        {classes.map((classes) => {
-          return <Item key={classes.id} name={classes.name} />;
+        {classes.map(({ id, name }) => {
+          return (
+            <Item key={id}>
+              <h3>{name}</h3>
+            </Item>
+          );
         })}
       </div>
     </div>

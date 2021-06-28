@@ -12,7 +12,7 @@
   box-shadow: 0px 4px 8px 2px rgb(0, 0, 0, 0.2);
 }
 
-#item h3, #item p {
+#item h3, #item h4, #item p {
   text-align: center;
   margin: 0;
 }

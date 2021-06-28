@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import api from '../../services/api';
 
 import Item from '../../components/Item';
 
 import './style.css';
+import Button from '../../components/Button';
 
 type Course = {
   id: number;
@@ -27,14 +30,25 @@ const Courses = () => {
     <div id="container">
       <h1>Listagem de Cursos</h1>
       <div id="courses">
-        {courses.map((course) => {
+        {courses.map(({ id, name, type, mandatory_workload }) => {
           return (
-            <Item
-              key={course.id}
-              name={course.name}
-              type={course.type}
-              workload={course.mandatory_workload}
-            />
+            <Item key={id}>
+              <h4>{name}</h4>
+              <p>
+                {type === 0
+                  ? 'Graduação'
+                  : type === 1
+                  ? 'Mestrado'
+                  : type === 2
+                  ? 'Doutorado'
+                  : ''}
+              </p>
+              <p>
+                {mandatory_workload
+                  ? `Carga Horária: ${mandatory_workload}`
+                  : ``}
+              </p>
+            </Item>
           );
         })}
       </div>
