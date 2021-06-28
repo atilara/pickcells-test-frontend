@@ -42,9 +42,8 @@ const CourseDetail = ({ match }: ComposedProps) => {
 
   return (
     <div id="container">
-      <h2>
-        {course?.course.name} ({getCourseType(course?.course.type)})
-      </h2>
+      <h2>{course?.course.name}</h2>
+      <h3>Tipo de Curso: {getCourseType(course?.course.type)}</h3>
       <h3>
         Total de Carga Horária Obrigatória: {course?.mandatory_workload.sum}
       </h3>
