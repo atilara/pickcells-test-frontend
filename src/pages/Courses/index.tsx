@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
+import getCourseType from '../../utils/getCourseType';
 
 import Item from '../../components/Item';
+import Button from '../../components/Button';
 
 import './style.css';
-import Button from '../../components/Button';
 
 type Course = {
   id: number;
@@ -34,13 +35,7 @@ const Courses = () => {
           return (
             <Item key={id}>
               <h4>{name}</h4>
-              <p>
-                {type === 0
-                  ? 'Graduação'
-                  : type === 1
-                  ? 'Mestrado'
-                  : 'Doutorado'}
-              </p>
+              <p>{getCourseType(type)}</p>
               <p>{`Carga Horária: ${mandatory_workload}`}</p>
               <Link to={`/courses/${id}`}>
                 <Button>Acessar aqui</Button>
