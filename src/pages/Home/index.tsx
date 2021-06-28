@@ -30,7 +30,13 @@ const Home = () => {
               href="https://github.com/atilara/pickcells-test-frontend"
               target="_blank"
             >
-              <Button>Repositório</Button>
+              <Button>Front-end</Button>
+            </a>
+            <a
+              href="https://github.com/atilara/pickcells-test-backend"
+              target="_blank"
+            >
+              <Button>Back-end</Button>
             </a>
           </div>
         </div>
