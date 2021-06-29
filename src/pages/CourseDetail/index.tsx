@@ -6,6 +6,8 @@ import getCourseType from '../../utils/getCourseType';
 
 import Item from '../../components/Item';
 
+import filesImg from '../../assets/images/files.png';
+
 import './style.css';
 
 type ComposedProps = RouteComponentProps<{
@@ -42,11 +44,23 @@ const CourseDetail = ({ match }: ComposedProps) => {
 
   return (
     <div id="container">
-      <h2>{course?.course.name}</h2>
-      <h3>Tipo de Curso: {getCourseType(course?.course.type)}</h3>
-      <h3>
-        Total de Carga Horária Obrigatória: {course?.mandatory_workload.sum}
-      </h3>
+      <h1>Descrição de Curso</h1>
+      <div id="wrapper">
+        <img src={filesImg} alt="Arquivos" />
+        <div>
+          <h2>{course?.course.name}</h2>
+          <h3>Tipo de Curso: {getCourseType(course?.course.type)}</h3>
+          <h3>
+            Total de Carga Horária Obrigatória: {course?.mandatory_workload.sum}
+          </h3>
+          <p>
+            Esta é a tela específica de curso, foi feita utilizando os
+            paramêtros de rota, que são passados através da URL. Utilizando esse
+            ID, a API é consumida para retorno dos detalhes desse curso.
+          </p>
+        </div>
+      </div>
+      <h2>Listagem de Classes</h2>
       <div id="item-grid">
         {course?.classes.map(({ name, workload, mandatory }) => {
           return (

@@ -10,12 +10,18 @@ const Home = () => {
   return (
     <div id="container">
       <img src={pickcellsImg} alt="Logo da Empresa" />
-      <header>
+      <h1>Este é um sistema para Gerenciamento de Cursos!</h1>
+      <div id="wrapper">
+        <img src={illustration} alt="Ilustração de um trabalho em andamento" />
+
         <div>
-          <h1>Este é um sistema para Gerenciamento de Cursos!</h1>
           <p>
             Me chamo Átila Rodrigues, e estou realizando este desafio à pedido
-            da PickCells. Para saber mais, você pode verificar o enunciado do
+            da PickCells.
+          </p>
+          <p>
+            Para saber mais em relação ao enunciado e tecnologias utilizadas
+            durante o desenvolvimento, você pode verificar o enunciado do
             desafio e o repositório onde o mesmo foi desenvolvido através dos
             botões a seguir:
           </p>
@@ -40,8 +46,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <img src={illustration} alt="Ilustração de um trabalho em andamento" />
-      </header>
+      </div>
       <h2>Navegação</h2>
       <div id="pages">
         <Card

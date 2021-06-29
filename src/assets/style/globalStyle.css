@@ -35,6 +35,21 @@ body {
   margin: 2rem 1rem;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrapper img {
+  width: 20rem;
+}
+
+#wrapper h1, p {
+  text-align: center;
+}
+
 #item-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -46,4 +61,18 @@ body {
   #item-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  #wrapper {
+    flex-direction: row-reverse;
+  }
+  
+  #wrapper div {
+    max-width: 40rem;
+  }
+
+  #wrapper img {
+    width: 35rem;
+  }
+  
 }
+

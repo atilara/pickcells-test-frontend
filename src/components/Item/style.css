@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   
+  background-color: var(--main-blue);
   border-radius: var(--rounded-border-two);
   width: 14rem;
   height: 8rem;
@@ -15,4 +16,5 @@
 #item h3, #item h4, #item p {
   text-align: center;
   margin: 0;
+  color: var(--white);
 }
