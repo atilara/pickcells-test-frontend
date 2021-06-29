@@ -21,6 +21,7 @@ type Course = {
   };
   classes: [
     {
+      id: number;
       name: string;
       workload: number;
       mandatory: number;
@@ -62,9 +63,9 @@ const CourseDetail = ({ match }: ComposedProps) => {
       </div>
       <h2>Listagem de Classes</h2>
       <div id="item-grid">
-        {course?.classes.map(({ name, workload, mandatory }) => {
+        {course?.classes.map(({ id, name, workload, mandatory }) => {
           return (
-            <Item>
+            <Item key={id}>
               <h4>{name}</h4>
               <p>Carga Horária: {workload}</p>
               <p>Cadeira {mandatory ? 'Obrigatória' : 'Opcional'}</p>
