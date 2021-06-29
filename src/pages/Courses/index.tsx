@@ -19,11 +19,11 @@ type Course = {
 const Courses = () => {
   const [courses, setCourses] = useState<Course[]>([]);
 
-  async function loadCourses() {
-    const courses = await api.get('courses');
-    setCourses(courses.data.course_classes);
-  }
   useEffect(() => {
+    async function loadCourses() {
+      const courses = await api.get('courses');
+      setCourses(courses.data.course_classes);
+    }
     loadCourses();
   }, []);
 

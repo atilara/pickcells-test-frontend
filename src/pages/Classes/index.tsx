@@ -14,11 +14,11 @@ type Class = {
 const Classes = () => {
   const [classes, setClasses] = useState<Class[]>([]);
 
-  async function loadClasses() {
-    const courses = await api.get('classes');
-    setClasses(courses.data);
-  }
   useEffect(() => {
+    async function loadClasses() {
+      const courses = await api.get('classes');
+      setClasses(courses.data);
+    }
     loadClasses();
   });
 

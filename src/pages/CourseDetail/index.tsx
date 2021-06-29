@@ -35,11 +35,11 @@ type Course = {
 const CourseDetail = ({ match }: ComposedProps) => {
   const [course, setCourse] = useState<Course>();
 
-  async function loadCourse() {
-    const courses = await api.get(`courses/${Number(match.params.id)}`);
-    setCourse(courses.data);
-  }
   useEffect(() => {
+    async function loadCourse() {
+      const courses = await api.get(`courses/${Number(match.params.id)}`);
+      setCourse(courses.data);
+    }
     loadCourse();
   }, []);
 
