@@ -20,7 +20,7 @@ const Classes = () => {
       setClasses(courses.data);
     }
     loadClasses();
-  });
+  }, []);
 
   return (
     <div id="container">

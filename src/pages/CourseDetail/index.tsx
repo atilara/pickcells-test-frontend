@@ -41,7 +41,7 @@ const CourseDetail = ({ match }: ComposedProps) => {
       setCourse(courses.data);
     }
     loadCourse();
-  }, []);
+  }, [match.params.id]);
 
   return (
     <div id="container">
